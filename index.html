@@ -58,19 +58,25 @@
             <div class="sign-up__content">
                 <div class="form_popup">
                     <div class="question_popup">Как часто вы заходите на сайт?</div>
-                    <div class="select_popup"><select атрибуты>
-                        <option атрибуты>Почти каждый день</option>
-                        <option атрибуты>Раз в неделю</option>
+                    <div class="select_popups"><select class="select_popup">
+                        <option>Почти каждый день</option>
+                        <option>Раз в неделю</option>
                     </select></div>
                 </div>
                 <div class="form_popup">
                     <div class="question_popup">Вы подписаны на рассылку?</div>
-                    <input type="radio" id="contactChoice1"
-                           name="contact" value="text">
-                    <label for="contactChoice1">Да</label>
-                    <input type="radio" id="contactChoice2"
-                           name="contact" value="email">
-                    <label for="contactChoice1">Нет</label>
+
+                    <div class="radio-holder">
+                        <input type="radio" id="contactChoices" name="contact" value="text">
+
+                        <label for="contactChoices" class="contactChoices"><div class="radio-group"> Да</div></label>
+                    </div>
+
+                    <div class="radio-holder">
+                        <input type="radio" id="contactChoices_no" name="contact" value="email">
+
+                        <label for="contactChoices_no" class="contactChoices"><div class="radio-group"> Нет</div></label>
+                    </div>
                 </div>
                 <div class="form_popup">
                     <div class="question_popup">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</div>
@@ -84,12 +90,11 @@
 </div>
 <article class="trend_section">
     <div class="trend_posts">
-        <h2 class="trend_posts-1">Сейчас в тренде</h2>
+        <h2 class="trend_posts_title">Сейчас в тренде</h2>
     </div>
     <div class="on_trend">
         <div class="picture_on_trend">
-            <div class="trends">
-                <img src="images/trend1.jpg" alt="тренды" class="trend-img">
+            <div class="trends" style="background-image: url(images/trend1.jpg);">
                 <div class="trend-overlay">
                     <div class="trend-description">
                         <ul class="tags trend">
