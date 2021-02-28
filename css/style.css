@@ -140,7 +140,7 @@ body {
     display: flex;
 }
 
-.popup__container {
+.popup-container {
     max-width: 768px;
 
     margin: auto;
@@ -149,7 +149,7 @@ body {
     position: relative;
 }
 
-.sign-up__button {
+.sign-up-button {
     width: 350px;
     margin-top: 20px;
     background-color: #b59f5b;;
@@ -164,7 +164,7 @@ body {
     text-transform: uppercase;
 }
 
-.sign-up__button:hover, .sign-up__button:focus {
+.sign-up-button:hover, .sign-up-button:focus {
     background-color: #ffffff;
     color: #b59f5b;
 }
@@ -190,25 +190,25 @@ body {
     background-color: #f3f7f6;
 }
 
-.question_popup {
+.question-popup {
     margin-top: 20px;
 
 }
 
 
-.sign-up__header {
+.sign-up-header {
     background-color: #ffffff;
     color: #000000;
     text-align: center;
 }
 
-.sign-up__hint {
+.sign-up-hint {
     text-transform: uppercase;
     font-weight: bolder;
     display: inline-block;
 }
 
-.sign-up__hint::after {
+.sign-up-hint::after {
     content: "";
     width: 64px;
     height: 3px;
@@ -222,7 +222,7 @@ body {
     display: inline-block;
 }
 
-.select_popup {
+.select-popup {
     -webkit-appearance: none;
     -moz-appearance: none;
     display: block;
@@ -248,31 +248,9 @@ body {
 }
 
 
-@media (min-width: 481px) {
-
-    .sign-up {
-        max-width: 390px;
-        min-width: 390px;
-    }
-
-    .sign-up__header {
-        font-size: 16px;
-    }
-
-    .sign-up__content {
-        padding: 30px;
-        padding-top: 10px;
-        /*margin-right: -160px;*/
-    }
-
-    .sign-up__header {
-        margin-top:  40px;
-    }
-
-
 /* button close */
 
-.popup__close {
+.popup-close {
     background-color: transparent;
     border: none;
     padding: 0;
@@ -280,7 +258,7 @@ body {
     cursor: pointer;
 }
 
-.popup__close:before, .popup__close:after {
+.popup-close:before, .popup-close:after {
     content: "";
     background-color: #ffffff;
     border-radius: 5px;
@@ -289,15 +267,15 @@ body {
     left: 50%;
 }
 
-.popup__close:before {
+.popup-close:before {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.popup__close:after {
+.popup-close:after {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.popup__close {
+.popup-close {
     width: 1.4em;
     height: 1em;
     font-size: 20px;
@@ -307,7 +285,7 @@ body {
     right: 0;
 }
 
-.popup__close:before, .popup__close:after {
+.popup-close:before, .popup-close:after {
     width: 28px;
     height: 4px;
 }
@@ -350,19 +328,42 @@ input[type=radio] {
     width: 1px;
 }
 
+@media (min-width: 481px) {
+
+    .sign-up {
+        max-width: 390px;
+        min-width: 390px;
+    }
+
+    .sign-up-header {
+        font-size: 16px;
+    }
+
+    .sign-up-content {
+        padding: 30px;
+        padding-top: 10px;
+        /*margin-right: -160px;*/
+    }
+
+    .sign-up-header {
+        margin-top: 40px;
+    }
+
+}
+
 @media (max-width: 481px) {
-    .popup__close {
+    .popup-close {
         font-size: 0.94em;
     }
 }
 
 /* Начало новой секции: В тренде */
 
-.on_trend {
+.on-trend {
     width: 100%;
 }
 
-.picture_on_trend {
+.picture-on-trend {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
@@ -379,6 +380,9 @@ input[type=radio] {
     width: 100%;
     height: 100%;
     /*object-fit: scale-down;*/
+    /*height: 321px;*/
+    background-size: cover;
+
 }
 
 .trends:first-child {
@@ -413,7 +417,7 @@ input[type=radio] {
     border: 4px solid rgba(181, 159, 91, 0.6);
 }
 
-.trend_posts_title {
+.trend-posts-title {
     padding-bottom: 28px;
     padding-top: 60px;
     font-size: 17px;
@@ -423,7 +427,7 @@ input[type=radio] {
     text-transform: uppercase;
 }
 
-.trend_posts_title::after {
+.trend-posts-title::after {
     content: "";
     width: 64px;
     height: 3px;
@@ -447,7 +451,7 @@ input[type=radio] {
     font-family: OpenSans, italic;
 }
 
-.form_popup_button {
+.form-popup-button {
     text-align: left;
 }
 
@@ -468,8 +472,12 @@ input[type=radio] {
     display: flex;
 }
 
-.article:nth-child(1n + 2) {
+.article {
     margin-top: 58px;
+}
+
+.article.first {
+    margin-top: 0;
 }
 
 .article-img {
@@ -549,8 +557,11 @@ input[type=radio] {
     display: flex;
 }
 
-.new-posts:nth-child(1n + 3) {
+.new-posts {
     padding-top: 23px;
+}
+.new-posts.first {
+    padding-top: 0
 }
 
 .posts {
@@ -825,14 +836,14 @@ input[type=radio] {
     margin: 0 -50px; /* должно быть столько же сколько в .item-container наоборот */
 }
 
-.item-container .name-item-container {
+.name-item-container {
     margin-top: -71px;
     padding: 20px;
     box-sizing: border-box;
     border: 4px solid rgba(181, 159, 91, 0.6);
 }
 
-.item-container .item-img {
+.item-img {
     width: 100%;
     padding: 35px;
     box-sizing: border-box;
@@ -1014,7 +1025,7 @@ input[type=radio] {
     position: absolute;
 }
 
-._hidden {
+.-hidden {
     display: none;
 }
 
@@ -1035,7 +1046,7 @@ button:hover {
 /* Таблет версия */
 
 @media (min-width: 641px) and (max-width: 1200px) {
-    .picture_on_trend {
+    .picture-on-trend {
         flex-wrap: wrap;
     }
 
@@ -1096,12 +1107,12 @@ button:hover {
     }
 
     /**/
-    .trends:nth-child(even) {
+    .trends.even {
         padding-left: 4px;
         padding-right: 0;
     }
 
-    .trends:nth-child(odd) {
+    .trends.odd {
         padding-left: 0;
         padding-right: 0;
     }
@@ -1111,12 +1122,12 @@ button:hover {
         bottom: 0px;
     }
 
-    .trends:nth-child(odd) .trend-overlay {
+    .trends.odd .trend-overlay {
         left: 0px;
         right: 0px;
     }
 
-    .trends:nth-child(even) .trend-overlay {
+    .trends.even .trend-overlay {
         left: 4px;
         right: 0px;
     }
@@ -1134,7 +1145,7 @@ button:hover {
     }
 }
 
-
+/* мобuльная верс */
 @media (max-width: 640px) {
 
     .menu-list-item {
@@ -1151,7 +1162,7 @@ button:hover {
         width: 100%;
     }
 
-    .picture_on_trend, .page {
+    .picture-on-trend, .page {
         flex-wrap: wrap;
     }
 
@@ -1177,4 +1188,12 @@ button:hover {
         margin-left: auto;
         margin-right: auto;
     }
-}}
+
+    .trends {
+        padding-left: 0;
+        margin-top: 4px;
+    }
+    .trends .trend-overlay {
+        left: 0;
+    }
+}
