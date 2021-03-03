@@ -243,8 +243,8 @@ body {
 
     min-height: 47px;
     max-height: 47px;
-    max-width: 100%px;
-    min-width: 100%px;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 
@@ -437,7 +437,7 @@ input[type=radio] {
     margin-top: 8px;
 }
 
-.tags.trend {
+.tags.tags-trend {
     padding-bottom: 14px;
 }
 
@@ -476,7 +476,7 @@ input[type=radio] {
     margin-top: 58px;
 }
 
-.article.first {
+.article.article-first {
     margin-top: 0;
 }
 
@@ -1107,27 +1107,27 @@ button:hover {
     }
 
     /**/
-    .trends.even {
+    .trends-even {
         padding-left: 4px;
         padding-right: 0;
     }
 
-    .trends.odd {
+    .trends-odd {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .trends .trend-overlay {
+    .trend-overlay {
         top: 4px;
         bottom: 0px;
     }
 
-    .trends.odd .trend-overlay {
+    .trends-odd .trend-overlay {
         left: 0px;
         right: 0px;
     }
 
-    .trends.even .trend-overlay {
+    .trends-even .trend-overlay {
         left: 4px;
         right: 0px;
     }
@@ -1193,7 +1193,7 @@ button:hover {
         padding-left: 0;
         margin-top: 4px;
     }
-    .trends .trend-overlay {
+    .trend-overlay {
         left: 0;
     }
 }
